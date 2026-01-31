@@ -14,7 +14,7 @@ export default function TestimonialsPage() {
                     {/* Header */}
                     <div className="text-center mb-16">
                         <h1 className="text-4xl md:text-6xl font-bold mb-6 font-orbitron">
-                            {data.title} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-pink-500">{data.titleAccent}</span>
+                            {data.title} <span className="text-primary">{data.titleAccent}</span>
                         </h1>
                         <p className="text-xl text-gray-400 font-medium max-w-2xl mx-auto">
                             {data.subtitle}
