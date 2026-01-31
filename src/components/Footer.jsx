@@ -74,7 +74,7 @@ export default function Footer() {
                             </li>
                             <li className="flex items-center gap-3 text-gray-400 text-sm">
                                 <Mail size={18} className="text-primary shrink-0" />
-                                <a href="mailto:hello@voidstack.dev" className="hover:text-primary transition-colors">hello@voidstack.dev</a>
+                                <a href="mailto:voidstackdev@gmail.com" className="hover:text-primary transition-colors">voidstackdev@gmail.com</a>
                             </li>
                         </ul>
                     </div>
