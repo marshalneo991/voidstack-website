@@ -38,13 +38,13 @@ export default function Navbar() {
                         <Link
                             key={link.name}
                             to={link.path}
-                            className={`text-sm font-medium transition-colors hover:text-primary ${location.pathname === link.path ? 'text-primary' : 'text-gray-300'}`}
+                            className={`text-sm font-orbitron font-medium transition-colors hover:text-primary ${location.pathname === link.path ? 'text-primary' : 'text-gray-300'}`}
                         >
                             {link.name}
                         </Link>
                     ))}
                     <Link to="/contact">
-                        <Button variant="primary" className="py-2 px-4 text-sm">
+                        <Button variant="primary" className="py-2 px-4 text-sm font-orbitron">
                             Get a Quote
                         </Button>
                     </Link>
@@ -72,13 +72,13 @@ export default function Navbar() {
                                 key={link.name}
                                 to={link.path}
                                 onClick={() => setIsOpen(false)}
-                                className={`text-lg font-medium ${location.pathname === link.path ? 'text-primary' : 'text-gray-300'}`}
+                                className={`text-lg font-orbitron font-medium ${location.pathname === link.path ? 'text-primary' : 'text-gray-300'}`}
                             >
                                 {link.name}
                             </Link>
                         ))}
                         <Link to="/contact" onClick={() => setIsOpen(false)}>
-                            <Button variant="primary" className="w-full mt-4">
+                            <Button variant="primary" className="w-full mt-4 font-orbitron">
                                 Get a Quote
                             </Button>
                         </Link>
