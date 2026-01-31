@@ -21,6 +21,7 @@ export const translations = {
             home: "Home",
             services: "Services",
             about: "About",
+            testimonials: "Testimonials",
             pricing: "Pricing",
             maintenance: "Maintenance",
             contact: "Contact",
@@ -234,6 +235,7 @@ export const translations = {
             home: "Home",
             services: "Leistungen",
             about: "Über mich",
+            testimonials: "Bewertungen",
             pricing: "Preise",
             maintenance: "Wartung",
             contact: "Kontakt",
@@ -426,3 +428,5 @@ export const translations = {
         }
     }
 };
+
+

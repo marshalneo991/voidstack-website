@@ -3,6 +3,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import About from './pages/About';
+import Testimonials from './pages/Testimonials';
 import Pricing from './pages/Pricing';
 import Maintenance from './pages/Maintenance';
 import Contact from './pages/Contact';
@@ -30,6 +31,7 @@ function AppContent() {
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
+        <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/maintenance" element={<Maintenance />} />
         <Route path="/contact" element={<Contact />} />

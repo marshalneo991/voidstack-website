@@ -21,12 +21,12 @@ export default function Contact() {
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <a href="mailto:hello@voidstack.dev" className="group flex flex-col items-center p-8 bg-gray-900/30 border border-gray-800 rounded-2xl hover:border-primary/50 transition-colors">
+                    <a href="mailto:voidstackdev@gmail.com" className="group flex flex-col items-center p-8 bg-gray-900/30 border border-gray-800 rounded-2xl hover:border-primary/50 transition-colors">
                         <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                             <Mail size={32} />
                         </div>
                         <h3 className="font-semibold text-white text-xl mb-2 font-orbitron">{t('contact.emailUs')}</h3>
-                        <p className="text-gray-400 group-hover:text-primary transition-colors">hello@voidstack.dev</p>
+                        <p className="text-gray-400 group-hover:text-primary transition-colors">voidstackdev@gmail.com</p>
                     </a>
 
                     <a href="tel:+387644281802" className="group flex flex-col items-center p-8 bg-gray-900/30 border border-gray-800 rounded-2xl hover:border-primary/50 transition-colors">
@@ -49,3 +49,4 @@ export default function Contact() {
         </motion.div>
     );
 }
+

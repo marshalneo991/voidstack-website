@@ -46,6 +46,7 @@ export default function Footer() {
                         <ul className="space-y-3">
                             <li><Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors font-orbitron">{t('nav.home')}</Link></li>
                             <li><Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors font-orbitron">{t('nav.services')}</Link></li>
+                            <li><Link to="/testimonials" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors font-orbitron">{t('nav.testimonials')}</Link></li>
                             <li><Link to="/pricing" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors font-orbitron">{t('nav.pricing')}</Link></li>
                             <li><Link to="/maintenance" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors font-orbitron">{t('nav.maintenance')}</Link></li>
                         </ul>
