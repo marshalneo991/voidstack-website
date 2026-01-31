@@ -36,15 +36,30 @@ export default function Navbar() {
                 </Link>
 
                 {/* Desktop Nav */}
-                <div className="hidden md:flex items-center gap-8">
+                <motion.div
+                    initial="hidden"
+                    animate="visible"
+                    variants={{
+                        visible: { transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
+                        hidden: {}
+                    }}
+                    className="hidden md:flex items-center gap-8"
+                >
                     {navLinks.map((link) => (
-                        <Link
+                        <motion.div
                             key={link.path}
-                            to={link.path}
-                            className={`text-sm font-orbitron font-medium transition-colors hover:text-primary ${location.pathname === link.path ? 'text-primary' : 'text-gray-300'}`}
+                            variants={{
+                                hidden: { opacity: 0, y: -10 },
+                                visible: { opacity: 1, y: 0 }
+                            }}
                         >
-                            {link.name}
-                        </Link>
+                            <Link
+                                to={link.path}
+                                className={`text-sm font-orbitron font-medium transition-colors hover:text-primary ${location.pathname === link.path ? 'text-primary' : 'text-gray-300'}`}
+                            >
+                                {link.name}
+                            </Link>
+                        </motion.div>
                     ))}
                     <div className="flex items-center gap-4 border-l border-gray-800 pl-4">
                         <LanguageSwitch />
@@ -54,7 +69,7 @@ export default function Navbar() {
                             </Button>
                         </Link>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Mobile Menu Button */}
                 <div className="md:hidden">

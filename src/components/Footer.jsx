@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { Github, Twitter, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../context/LanguageContext';
@@ -10,7 +11,13 @@ export default function Footer() {
             {/* Abstract Background Element */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
 
-            <div className="container mx-auto px-6 relative z-10">
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.2 }}
+                className="container mx-auto px-6 relative z-10"
+            >
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                     <div className="col-span-1 md:col-span-1">
                         <div className="flex items-center gap-2 mb-4">
@@ -78,7 +85,7 @@ export default function Footer() {
                         <Link to="/terms" onClick={() => window.scrollTo(0, 0)} className="text-gray-500 hover:text-white text-sm">{t('common.termsOfService')}</Link>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </footer>
     );
 }

@@ -9,10 +9,6 @@ export default function PricingCard({ title, price, features, isPopular, delay =
 
     return (
         <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay }}
-            viewport={{ once: true }}
             className={`relative p-8 rounded-2xl border ${isPopular ? 'border-primary bg-gray-900/80 shadow-[0_0_40px_rgba(138,43,226,0.2)]' : 'border-gray-800 bg-gray-900/30'} flex flex-col h-full`}
         >
             {isPopular && (

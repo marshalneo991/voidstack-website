@@ -1,5 +1,6 @@
 import PricingCard from '../components/PricingCard';
 import { useTranslation } from '../context/LanguageContext';
+import { motion } from 'framer-motion';
 
 export default function PricingSection() {
     const { t } = useTranslation();
@@ -35,15 +36,31 @@ export default function PricingSection() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={{
+                        visible: { transition: { staggerChildren: 0.2 } },
+                        hidden: {}
+                    }}
+                    className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+                >
                     {packages.map((pkg, index) => (
-                        <PricingCard
+                        <motion.div
                             key={index}
-                            {...pkg}
-                            delay={index * 0.1}
-                        />
+                            variants={{
+                                hidden: { opacity: 0, y: 20 },
+                                visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+                            }}
+                        >
+                            <PricingCard
+                                {...pkg}
+                                delay={0}
+                            />
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );

@@ -9,10 +9,6 @@ export default function MaintenanceCard({ title, price, features, isPopular, del
 
     return (
         <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay }}
-            viewport={{ once: true }}
             className={`relative p-6 rounded-xl border transition-all ${isPopular ? 'border-primary bg-primary/5 shadow-[0_0_30px_rgba(138,43,226,0.15)]' : 'border-gray-800 bg-black/50 hover:bg-gray-900/50'}`}
         >
             {isPopular && (

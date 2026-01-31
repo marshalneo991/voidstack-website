@@ -1,5 +1,6 @@
 import MaintenanceCard from '../components/MaintenanceCard';
 import { useTranslation } from '../context/LanguageContext';
+import { motion } from 'framer-motion';
 
 export default function MaintenanceSection() {
     const { t } = useTranslation();
@@ -27,7 +28,12 @@ export default function MaintenanceSection() {
         <section className="py-24 bg-background border-t border-gray-900" id="maintenance">
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-                    <div>
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
+                    >
                         <h2 className="text-3xl md:text-5xl font-bold mb-6 font-orbitron">{t('maintenancePlan.title')} <br /><span className="text-primary">{t('maintenancePlan.titleAccent')}</span></h2>
                         <p className="text-gray-400 text-lg mb-8 leading-relaxed">
                             {t('maintenancePlan.subtitle')}
@@ -36,13 +42,30 @@ export default function MaintenanceSection() {
                             <h4 className="font-bold text-primary mb-1 font-orbitron">{t('common.hostingIncluded')}</h4>
                             <p className="text-sm text-gray-400">{t('common.hostingDetail')}</p>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="grid grid-cols-1 gap-4">
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={{
+                            visible: { transition: { staggerChildren: 0.1 } },
+                            hidden: {}
+                        }}
+                        className="grid grid-cols-1 gap-4"
+                    >
                         {plans.map((plan, index) => (
-                            <MaintenanceCard key={index} {...plan} delay={index * 0.1} />
+                            <motion.div
+                                key={index}
+                                variants={{
+                                    hidden: { opacity: 0, x: 20 },
+                                    visible: { opacity: 1, x: 0, transition: { duration: 0.8 } }
+                                }}
+                            >
+                                <MaintenanceCard {...plan} delay={0} />
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
