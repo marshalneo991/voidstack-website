@@ -29,12 +29,12 @@ export default function Contact() {
                         <p className="text-gray-400 group-hover:text-primary transition-colors">hello@voidstack.dev</p>
                     </a>
 
-                    <a href="tel:+49123456789" className="group flex flex-col items-center p-8 bg-gray-900/30 border border-gray-800 rounded-2xl hover:border-primary/50 transition-colors">
+                    <a href="tel:+387644281802" className="group flex flex-col items-center p-8 bg-gray-900/30 border border-gray-800 rounded-2xl hover:border-primary/50 transition-colors">
                         <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                             <Phone size={32} />
                         </div>
                         <h3 className="font-semibold text-white text-xl mb-2 font-orbitron">{t('contact.callUs')}</h3>
-                        <p className="text-gray-400 group-hover:text-primary transition-colors">+49 123 456 789</p>
+                        <p className="text-gray-400 group-hover:text-primary transition-colors">+387 64 428 1802</p>
                     </a>
 
                     <div className="flex flex-col items-center p-8 bg-gray-900/30 border border-gray-800 rounded-2xl">

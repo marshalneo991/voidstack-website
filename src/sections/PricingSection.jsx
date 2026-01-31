@@ -7,19 +7,19 @@ export default function PricingSection() {
     const packages = [
         {
             title: t('pricing.packages.basic.title'),
-            price: "2.500",
+            price: `${t('common.startingFrom')} 500`,
             isPopular: false,
             features: t('pricing.packages.basic.features', { returnObjects: true })
         },
         {
             title: t('pricing.packages.standard.title'),
-            price: "3.500",
+            price: `${t('common.startingFrom')} 1.000`,
             isPopular: true,
             features: t('pricing.packages.standard.features', { returnObjects: true })
         },
         {
             title: t('pricing.packages.premium.title'),
-            price: "4.500",
+            price: `${t('common.startingFrom')} 2.000`,
             isPopular: false,
             features: t('pricing.packages.premium.features', { returnObjects: true })
         }

@@ -14,6 +14,7 @@ export const translations = {
             lastUpdated: "Last updated",
             privacyPolicy: "Privacy Policy",
             termsOfService: "Terms of Service",
+            startingFrom: "from",
         },
         nav: {
             home: "Home",
@@ -93,15 +94,15 @@ export const translations = {
             packages: {
                 basic: {
                     title: "Basic",
-                    features: ["Responsive website", "Up to 5 sections", "Contact form"]
+                    features: ["Modern Business Website", "Responsive Design (Mobile / Tablet / Desktop)", "Frontend with React.js", "Up to 5 sections", "Contact Form", "Performance Optimized"]
                 },
                 standard: {
                     title: "Standard",
-                    features: ["Custom UI/UX", "Multiple sections", "SEO basics"]
+                    features: ["Custom UI/UX Design", "React.js Frontend", "Multiple Service Sections", "CTA Optimization", "Fast Load Times", "Basic SEO Optimization", "Ideal for Companies & Service Providers"]
                 },
                 premium: {
                     title: "Premium",
-                    features: ["Fully customized", "Multi-language option", "Technical SEO"]
+                    features: ["Completely Custom Website", "Advanced Sections & Content", "Multi-language (optional)", "Conversion Optimized Design", "Technical SEO Optimization", "Long-term Scalable"]
                 }
             }
         },
@@ -112,15 +113,15 @@ export const translations = {
             plans: {
                 basic: {
                     title: "Basic",
-                    features: ["Minor changes", "Technical checks"]
+                    features: ["Technical website check", "Minor adjustments (up to 30 min/month)", "Functionality check", "Email support"]
                 },
                 standard: {
                     title: "Standard",
-                    features: ["Regular optimization", "Fast updates"]
+                    features: ["All features of Basic", "Regular technical optimization", "Faster changes (up to 1.5 h/month)", "Performance checks", "Priority support"]
                 },
                 premium: {
                     title: "Premium",
-                    features: ["Continuous UI/UX improvements", "SEO optimization"]
+                    features: ["All features of Standard", "Continuous UI/UX optimization", "Technical SEO optimization", "Fast interventions (up to 4 h/month)"]
                 }
             }
         },
@@ -131,7 +132,7 @@ export const translations = {
             emailUs: "Email Us",
             callUs: "Call Us",
             visitUs: "Visit Us",
-            location: "Berlin, Germany"
+            location: "Kiseljak, Bosnia and Herzegovina"
         },
         footer: {
             description: "Building the digital future with modern web technologies. We create high-performance, aesthetically pleasing, and scalable web solutions.",
@@ -206,6 +207,7 @@ export const translations = {
             lastUpdated: "Zuletzt aktualisiert",
             privacyPolicy: "Datenschutzerklärung",
             termsOfService: "Nutzungsbedingungen",
+            startingFrom: "ab",
         },
         nav: {
             home: "Home",
@@ -284,16 +286,16 @@ export const translations = {
             subtitle: "Wählen Sie das perfekte Paket für Ihre geschäftlichen Anforderungen. Keine versteckten Kosten.",
             packages: {
                 basic: {
-                    title: "Basis",
-                    features: ["Responsive Website", "Bis zu 5 Sektionen", "Kontaktformular"]
+                    title: "Basic Paket",
+                    features: ["Moderne Business-Webseite", "Responsive Design (Mobile / Tablet / Desktop)", "Frontend mit React.js", "Bis zu 5 Sektionen", "Kontaktformular", "Performance-optimiert"]
                 },
                 standard: {
-                    title: "Standard",
-                    features: ["Individuelles UI/UX", "Mehrere Sektionen", "SEO-Grundlagen"]
+                    title: "Standard Paket",
+                    features: ["Individuelles UI/UX-Design", "React.js Frontend", "Mehrere Leistungs-Sektionen", "CTA-Optimierung", "Schnelle Ladezeiten", "SEO-Grundoptimierung", "Ideal für Unternehmen & Dienstleister"]
                 },
                 premium: {
-                    title: "Premium",
-                    features: ["Vollständig angepasst", "Mehrsprachigkeits-Option", "Technisches SEO"]
+                    title: "Premium Paket",
+                    features: ["Komplett maßgeschneiderte Webseite", "Erweiterte Sektionen & Inhalte", "Mehrsprachigkeit (optional)", "Conversion-optimiertes Design", "Technische SEO-Optimierung", "Langfristig skalierbar"]
                 }
             }
         },
@@ -303,16 +305,16 @@ export const translations = {
             subtitle: "Wir sorgen dafür, dass Ihre Website sicher, schnell und aktuell bleibt, damit Sie sich auf Ihr Geschäft konzentrieren können.",
             plans: {
                 basic: {
-                    title: "Basis",
-                    features: ["Kleinere Änderungen", "Technische Checks"]
+                    title: "Basic",
+                    features: ["Technische Überprüfung", "Kleine Anpassungen (bis 30 min/Monat)", "Funktionalitäts-Check", "Email-Support"]
                 },
                 standard: {
                     title: "Standard",
-                    features: ["Regelmäßige Optimierung", "Schnelle Updates"]
+                    features: ["Alle Leistungen des Basic-Pakets", "Regelmäßige techn. Optimierung", "Schnellere Änderungen (bis 1,5 h/Monat)", "Performance-Checks", "Prioritätssupport"]
                 },
                 premium: {
                     title: "Premium",
-                    features: ["Kontinuierliche UI/UX-Verbesserungen", "SEO-Optimierung"]
+                    features: ["Alle Leistungen des Standard-Pakets", "Kontinuierliche UI/UX-Optimierung", "Technische SEO-Optimierung", "Schnelle Eingriffe (bis 4 h/Monat)"]
                 }
             }
         },
@@ -323,7 +325,7 @@ export const translations = {
             emailUs: "Schreiben Sie uns",
             callUs: "Rufen Sie uns an",
             visitUs: "Besuchen Sie uns",
-            location: "Berlin, Deutschland"
+            location: "Kiseljak, Bosnien und Herzegowina"
         },
         footer: {
             description: "Die digitale Zukunft mit modernen Webtechnologien gestalten. Wir schaffen leistungsstarke, ästhetisch ansprechende und skalierbare Web-Lösungen.",

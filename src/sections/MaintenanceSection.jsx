@@ -7,17 +7,18 @@ export default function MaintenanceSection() {
     const plans = [
         {
             title: t('maintenancePlan.plans.basic.title'),
-            price: "99 €",
+            price: "30 €",
             features: t('maintenancePlan.plans.basic.features', { returnObjects: true })
         },
         {
             title: t('maintenancePlan.plans.standard.title'),
-            price: "199 €",
-            features: t('maintenancePlan.plans.standard.features', { returnObjects: true })
+            price: "60 €",
+            features: t('maintenancePlan.plans.standard.features', { returnObjects: true }),
+            isPopular: true
         },
         {
             title: t('maintenancePlan.plans.premium.title'),
-            price: "349 €",
+            price: "100 €",
             features: t('maintenancePlan.plans.premium.features', { returnObjects: true })
         }
     ];

@@ -61,11 +61,11 @@ export default function Footer() {
                             </li>
                             <li className="flex items-center gap-3 text-gray-400 text-sm">
                                 <Phone size={18} className="text-primary shrink-0" />
-                                <span>+49 123 456 789</span>
+                                <a href="tel:+387644281802" className="hover:text-primary transition-colors">+387 64 428 1802</a>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400 text-sm">
                                 <Mail size={18} className="text-primary shrink-0" />
-                                <span>hello@voidstack.dev</span>
+                                <a href="mailto:hello@voidstack.dev" className="hover:text-primary transition-colors">hello@voidstack.dev</a>
                             </li>
                         </ul>
                     </div>
