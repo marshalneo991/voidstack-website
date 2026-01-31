@@ -55,7 +55,9 @@ export default function Navbar() {
                         >
                             <Link
                                 to={link.path}
-                                className={`text-sm font-orbitron font-medium transition-colors hover:text-primary ${location.pathname === link.path ? 'text-primary' : 'text-gray-300'}`}
+                                className={`text-sm font-orbitron font-medium transition-all duration-300 ${location.pathname === link.path
+                                    ? 'text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-pink-500'
+                                    : 'text-gray-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-primary hover:via-purple-400 hover:to-pink-500'}`}
                             >
                                 {link.name}
                             </Link>
@@ -82,34 +84,46 @@ export default function Navbar() {
             {/* Mobile Nav */}
             <AnimatePresence>
                 {isOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        className="md:hidden absolute top-full left-0 w-full bg-background border-b border-gray-800 p-6 flex flex-col gap-4 shadow-xl"
-                    >
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.path}
-                                to={link.path}
-                                onClick={() => setIsOpen(false)}
-                                className={`text-lg font-orbitron font-medium ${location.pathname === link.path ? 'text-primary' : 'text-gray-300'}`}
-                            >
-                                {link.name}
-                            </Link>
-                        ))}
-                        <div className="flex flex-col gap-4 pt-4 border-t border-gray-800">
-                            <div className="flex justify-between items-center">
-                                <span className="text-sm text-gray-400 font-orbitron">{t('nav.language')}</span>
-                                <LanguageSwitch />
+                    <>
+                        {/* Backdrop for closing on click outside */}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setIsOpen(false)}
+                            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[-1] md:hidden"
+                        />
+                        <motion.div
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            className="md:hidden absolute top-full left-0 w-full bg-background border-b border-gray-800 p-6 flex flex-col gap-4 shadow-xl"
+                        >
+                            {navLinks.map((link) => (
+                                <Link
+                                    key={link.path}
+                                    to={link.path}
+                                    onClick={() => setIsOpen(false)}
+                                    className={`text-lg font-orbitron font-medium transition-all duration-300 ${location.pathname === link.path
+                                        ? 'text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-pink-500'
+                                        : 'text-gray-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-primary hover:via-purple-400 hover:to-pink-500'}`}
+                                >
+                                    {link.name}
+                                </Link>
+                            ))}
+                            <div className="flex flex-col gap-4 pt-4 border-t border-gray-800">
+                                <div className="flex justify-between items-center">
+                                    <span className="text-sm text-gray-400 font-orbitron">{t('nav.language')}</span>
+                                    <LanguageSwitch />
+                                </div>
+                                <Link to="/contact" onClick={() => setIsOpen(false)}>
+                                    <Button variant="primary" className="w-full font-orbitron">
+                                        {t('nav.getQuote')}
+                                    </Button>
+                                </Link>
                             </div>
-                            <Link to="/contact" onClick={() => setIsOpen(false)}>
-                                <Button variant="primary" className="w-full font-orbitron">
-                                    {t('nav.getQuote')}
-                                </Button>
-                            </Link>
-                        </div>
-                    </motion.div>
+                        </motion.div>
+                    </>
                 )}
             </AnimatePresence>
         </nav>

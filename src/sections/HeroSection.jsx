@@ -52,7 +52,11 @@ export default function HeroSection() {
                             transition={{ duration: 0.8, delay: 0.4 }}
                             className="text-xl text-gray-400 mb-10 max-w-lg leading-relaxed"
                         >
-                            {t('hero.description')}
+                            {t('hero.descriptionPart1')}
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-pink-500 font-bold">
+                                {t('hero.descriptionHighlight')}
+                            </span>
+                            {t('hero.descriptionPart2')}
                         </motion.p>
 
                         <motion.div

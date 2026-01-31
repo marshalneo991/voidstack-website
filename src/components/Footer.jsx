@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import { Github, Twitter, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from '../context/LanguageContext';
 
 export default function Footer() {
     const { t } = useTranslation();
+    const location = useLocation();
 
     return (
         <footer className="bg-black border-t border-gray-900 pt-16 pb-8 relative overflow-hidden">
@@ -12,10 +13,11 @@ export default function Footer() {
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
 
             <motion.div
+                key={location.pathname}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: false, amount: 0.1 }}
                 className="container mx-auto px-6 relative z-10"
             >
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
