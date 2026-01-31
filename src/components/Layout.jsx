@@ -1,5 +1,6 @@
 import Navbar from './Navbar';
 import Footer from './Footer';
+import WhatsAppButton from './WhatsAppButton';
 import { motion } from 'framer-motion';
 
 export default function Layout({ children }) {
@@ -12,6 +13,7 @@ export default function Layout({ children }) {
                 {children}
             </main>
             <Footer />
+            <WhatsAppButton />
         </div>
     );
 }
