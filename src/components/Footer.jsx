@@ -29,10 +29,10 @@ export default function Footer() {
                             {t('footer.description')}
                         </p>
                         <div className="flex gap-4">
-                            <a href="#" className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-primary hover:bg-gray-800 transition-all">
+                            <a href="https://x.com/MarkoGalic1991" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-primary hover:bg-gray-800 transition-all">
                                 <Twitter size={18} />
                             </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-primary hover:bg-gray-800 transition-all">
+                            <a href="https://github.com/marshalneo991" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-primary hover:bg-gray-800 transition-all">
                                 <Github size={18} />
                             </a>
                             <a href="#" className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-primary hover:bg-gray-800 transition-all">

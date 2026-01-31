@@ -20,6 +20,7 @@ export const translations = {
         nav: {
             home: "Home",
             services: "Services",
+            about: "About",
             pricing: "Pricing",
             maintenance: "Maintenance",
             contact: "Contact",
@@ -35,6 +36,22 @@ export const translations = {
             descriptionPart2: " difference.",
             startProject: "Start Your Project",
             ourServices: "Our Services",
+        },
+        about: {
+            title: "About",
+            titleAccent: "Me",
+            subtitle: "Bridging modern design with high-performance code.",
+            text1: "I’m a freelance web designer and frontend developer specialized in modern, high-performance React.js websites.",
+            text2: "I help businesses build fast, responsive, and conversion-focused websites with clean design and optimized performance.",
+            text3: "I work directly with my clients – no agencies, no unnecessary complexity – ensuring clear communication, reliability, and long-term support.",
+            text4: "Based in Bosnia and Herzegovina, working with clients across Germany and the EU.",
+            whyTitle: "Why work with me:",
+            features: [
+                "100% custom React solutions",
+                "Performance & SEO focused",
+                "Long-term maintenance & support"
+            ],
+            cta: "Let’s build something powerful together.",
         },
         services: {
             title: "Our Core",
@@ -216,6 +233,7 @@ export const translations = {
         nav: {
             home: "Home",
             services: "Leistungen",
+            about: "Über mich",
             pricing: "Preise",
             maintenance: "Wartung",
             contact: "Kontakt",
@@ -231,6 +249,22 @@ export const translations = {
             descriptionPart2: "-Unterschied.",
             startProject: "Projekt starten",
             ourServices: "Unsere Leistungen",
+        },
+        about: {
+            title: "Über",
+            titleAccent: "mich",
+            subtitle: "Modernes Design trifft auf Hochleistungs-Code.",
+            text1: "Ich bin freiberuflicher Webdesigner und Frontend-Entwickler, spezialisiert auf moderne, leistungsstarke React.js-Websites.",
+            text2: "Ich helfe Unternehmen dabei, schnelle, responsive und konversionsorientierte Websites mit klarem Design und optimierter Performance zu erstellen.",
+            text3: "Ich arbeite direkt mit meinen Kunden zusammen – ohne Agenturen, ohne unnötige Komplexität – und sondere für klare Kommunikation, Zuverlässigkeit und langfristige Unterstützung.",
+            text4: "Ansässig in Bosnien und Herzegowina, arbeite ich mit Kunden aus ganz Deutschland und der EU zusammen.",
+            whyTitle: "Warum Sie mit mir arbeiten sollten:",
+            features: [
+                "100% maßgeschneiderte React-Lösungen",
+                "Fokus auf Performance & SEO",
+                "Langfristige Wartung & Support"
+            ],
+            cta: "Lassen Sie uns gemeinsam etwas Starkes aufbauen.",
         },
         services: {
             title: "Unsere",

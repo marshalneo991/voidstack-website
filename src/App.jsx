@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Services from './pages/Services';
+import About from './pages/About';
 import Pricing from './pages/Pricing';
 import Maintenance from './pages/Maintenance';
 import Contact from './pages/Contact';
@@ -28,6 +29,7 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/about" element={<About />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/maintenance" element={<Maintenance />} />
         <Route path="/contact" element={<Contact />} />
