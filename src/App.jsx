@@ -10,11 +10,11 @@ import Privacy from './pages/Privacy';
 import { useEffect } from 'react'
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const location = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [location]);
 
   return null;
 }

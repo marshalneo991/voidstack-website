@@ -35,20 +35,20 @@ export default function Footer() {
                     <div>
                         <h3 className="text-lg font-semibold mb-6 font-orbitron">{t('footer.quickLinks')}</h3>
                         <ul className="space-y-3">
-                            <li><Link to="/" className="text-gray-400 hover:text-primary text-sm transition-colors font-orbitron">{t('nav.home')}</Link></li>
-                            <li><Link to="/services" className="text-gray-400 hover:text-primary text-sm transition-colors font-orbitron">{t('nav.services')}</Link></li>
-                            <li><Link to="/pricing" className="text-gray-400 hover:text-primary text-sm transition-colors font-orbitron">{t('nav.pricing')}</Link></li>
-                            <li><Link to="/maintenance" className="text-gray-400 hover:text-primary text-sm transition-colors font-orbitron">{t('nav.maintenance')}</Link></li>
+                            <li><Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors font-orbitron">{t('nav.home')}</Link></li>
+                            <li><Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors font-orbitron">{t('nav.services')}</Link></li>
+                            <li><Link to="/pricing" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors font-orbitron">{t('nav.pricing')}</Link></li>
+                            <li><Link to="/maintenance" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors font-orbitron">{t('nav.maintenance')}</Link></li>
                         </ul>
                     </div>
 
                     <div>
                         <h3 className="text-lg font-semibold mb-6 font-orbitron">{t('footer.services')}</h3>
                         <ul className="space-y-3">
-                            <li><Link to="/services" className="text-gray-400 hover:text-primary text-sm transition-colors">{t('services.items.webDesign.title')}</Link></li>
-                            <li><Link to="/services" className="text-gray-400 hover:text-primary text-sm transition-colors">{t('services.items.react.title')}</Link></li>
-                            <li><Link to="/services" className="text-gray-400 hover:text-primary text-sm transition-colors">{t('services.items.performance.title')}</Link></li>
-                            <li><Link to="/services" className="text-gray-400 hover:text-primary text-sm transition-colors">{t('services.items.seo.title')}</Link></li>
+                            <li><Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors">{t('services.items.webDesign.title')}</Link></li>
+                            <li><Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors">{t('services.items.react.title')}</Link></li>
+                            <li><Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors">{t('services.items.performance.title')}</Link></li>
+                            <li><Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors">{t('services.items.seo.title')}</Link></li>
                         </ul>
                     </div>
 
@@ -74,8 +74,8 @@ export default function Footer() {
                 <div className="border-t border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-gray-500 text-sm">© {new Date().getFullYear()} VoidStack. {t('footer.rights')}</p>
                     <div className="flex gap-6 font-orbitron">
-                        <Link to="/privacy" className="text-gray-500 hover:text-white text-sm">{t('common.privacyPolicy')}</Link>
-                        <Link to="/terms" className="text-gray-500 hover:text-white text-sm">{t('common.termsOfService')}</Link>
+                        <Link to="/privacy" onClick={() => window.scrollTo(0, 0)} className="text-gray-500 hover:text-white text-sm">{t('common.privacyPolicy')}</Link>
+                        <Link to="/terms" onClick={() => window.scrollTo(0, 0)} className="text-gray-500 hover:text-white text-sm">{t('common.termsOfService')}</Link>
                     </div>
                 </div>
             </div>
