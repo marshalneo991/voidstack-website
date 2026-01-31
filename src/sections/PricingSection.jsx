@@ -1,36 +1,27 @@
 import PricingCard from '../components/PricingCard';
+import { useTranslation } from '../context/LanguageContext';
 
 export default function PricingSection() {
+    const { t } = useTranslation();
+
     const packages = [
         {
-            title: "Basic",
+            title: t('pricing.packages.basic.title'),
             price: "2.500",
             isPopular: false,
-            features: [
-                "Responsive website",
-                "Up to 5 sections",
-                "Contact form"
-            ]
+            features: t('pricing.packages.basic.features', { returnObjects: true })
         },
         {
-            title: "Standard",
+            title: t('pricing.packages.standard.title'),
             price: "3.500",
             isPopular: true,
-            features: [
-                "Custom UI/UX",
-                "Multiple sections",
-                "SEO basics"
-            ]
+            features: t('pricing.packages.standard.features', { returnObjects: true })
         },
         {
-            title: "Premium",
+            title: t('pricing.packages.premium.title'),
             price: "4.500",
             isPopular: false,
-            features: [
-                "Fully customized",
-                "Multi-language option",
-                "Technical SEO"
-            ]
+            features: t('pricing.packages.premium.features', { returnObjects: true })
         }
     ];
 
@@ -38,9 +29,9 @@ export default function PricingSection() {
         <section className="py-24 bg-[#0A0812]" id="pricing">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4">Transparent <span className="text-primary">Pricing</span></h2>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-4 font-orbitron">{t('pricing.title')} <span className="text-primary">{t('pricing.titleAccent')}</span></h2>
                     <p className="text-gray-400 max-w-2xl mx-auto">
-                        Choose the perfect package for your business needs. No hidden fees.
+                        {t('pricing.subtitle')}
                     </p>
                 </div>
 

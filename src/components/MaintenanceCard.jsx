@@ -2,8 +2,11 @@ import { Check } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Button from './Button';
 import { motion } from 'framer-motion';
+import { useTranslation } from '../context/LanguageContext';
 
 export default function MaintenanceCard({ title, price, features, delay = 0 }) {
+    const { t } = useTranslation();
+
     return (
         <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -13,8 +16,8 @@ export default function MaintenanceCard({ title, price, features, delay = 0 }) {
             className="p-6 rounded-xl border border-gray-800 bg-black/50 hover:bg-gray-900/50 transition-colors"
         >
             <div className="flex justify-between items-center mb-4">
-                <h3 className="text-xl font-bold">{title}</h3>
-                <span className="text-2xl font-bold text-primary">{price} <span className="text-sm text-gray-500 font-normal">/month</span></span>
+                <h3 className="text-xl font-bold font-orbitron">{title}</h3>
+                <span className="text-2xl font-bold text-primary font-orbitron">{price} <span className="text-sm text-gray-500 font-normal">{t('common.month')}</span></span>
             </div>
 
             <ul className="space-y-2 mb-6">
@@ -27,8 +30,8 @@ export default function MaintenanceCard({ title, price, features, delay = 0 }) {
             </ul>
 
             <Link to="/contact" className="w-full">
-                <Button variant="outline" className="w-full text-sm py-2">
-                    Subscribe
+                <Button variant="outline" className="w-full text-sm py-2 font-orbitron">
+                    {t('common.subscribe')}
                 </Button>
             </Link>
         </motion.div>

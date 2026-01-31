@@ -1,55 +1,58 @@
 import { Palette, Atom, Rocket, Layout, Search, ShoppingBag, ShieldCheck, BarChart3 } from 'lucide-react';
 import ServiceCard from '../components/ServiceCard';
+import { useTranslation } from '../context/LanguageContext';
 
 export default function ServicesSection() {
+    const { t } = useTranslation();
+
     const services = [
         {
             id: 1,
             icon: Palette,
-            title: "Web Design",
-            description: "Sleek, modern aesthetics designed to captivate your audience. We focus on intuitive UI/UX that drives conversions and engagement."
+            title: t('services.items.webDesign.title'),
+            description: t('services.items.webDesign.description')
         },
         {
             id: 2,
             icon: Atom,
-            title: "React.js",
-            description: "Building scalable single-page applications with the power of React. Component-based architecture ensuring maintainability and speed."
+            title: t('services.items.react.title'),
+            description: t('services.items.react.description')
         },
         {
             id: 3,
             icon: Rocket,
-            title: "Performance",
-            description: "Blazing fast load times and optimized assets. We ensure your site ranks high on Core Web Vitals and provides a smooth user experience."
+            title: t('services.items.performance.title'),
+            description: t('services.items.performance.description')
         },
         {
             id: 4,
             icon: Layout,
-            title: "UI/UX Design",
-            description: "Intuitive, user-centered design for websites and apps that prioritizes user experience and interface consistency."
+            title: t('services.items.uiux.title'),
+            description: t('services.items.uiux.description')
         },
         {
             id: 5,
             icon: Search,
-            title: "SEO Optimization",
-            description: "Technical SEO, on-page SEO, and strategy to achieve faster ranking and better visibility in search engines."
+            title: t('services.items.seo.title'),
+            description: t('services.items.seo.description')
         },
         {
             id: 6,
             icon: ShoppingBag,
-            title: "E-commerce Solutions",
-            description: "Custom online stores using Shopify, WooCommerce, or bespoke solutions tailored to your products."
+            title: t('services.items.ecommerce.title'),
+            description: t('services.items.ecommerce.description')
         },
         {
             id: 7,
             icon: ShieldCheck,
-            title: "Maintenance & Support",
-            description: "Regular updates, bug fixes, and performance monitoring to keep your website secure and running smoothly."
+            title: t('services.items.maintenance.title'),
+            description: t('services.items.maintenance.description')
         },
         {
             id: 8,
             icon: BarChart3,
-            title: "Analytics & Reporting",
-            description: "Google Analytics setup and conversion tracking to provide actionable insights into your traffic and growth."
+            title: t('services.items.analytics.title'),
+            description: t('services.items.analytics.description')
         }
     ];
 
@@ -57,9 +60,9 @@ export default function ServicesSection() {
         <section className="py-24 bg-background relative" id="services">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4">Our Core <span className="text-primary">Services</span></h2>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-4 font-orbitron">{t('services.title')} <span className="text-primary">{t('services.titleAccent')}</span></h2>
                     <p className="text-gray-400 max-w-2xl mx-auto">
-                        Leveraging cutting-edge technologies to deliver exceptional digital experiences.
+                        {t('services.subtitle')}
                     </p>
                 </div>
 

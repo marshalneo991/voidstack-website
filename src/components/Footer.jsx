@@ -1,7 +1,10 @@
 import { Github, Twitter, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from '../context/LanguageContext';
 
 export default function Footer() {
+    const { t } = useTranslation();
+
     return (
         <footer className="bg-black border-t border-gray-900 pt-16 pb-8 relative overflow-hidden">
             {/* Abstract Background Element */}
@@ -14,7 +17,7 @@ export default function Footer() {
                             <img src="/assets/logo.png" alt="VoidStack" className="h-8 w-auto object-contain" />
                         </div>
                         <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                            Building the digital future with modern web technologies. We create high-performance, aesthetically pleasing, and scalable web solutions.
+                            {t('footer.description')}
                         </p>
                         <div className="flex gap-4">
                             <a href="#" className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-primary hover:bg-gray-800 transition-all">
@@ -30,31 +33,31 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
+                        <h3 className="text-lg font-semibold mb-6 font-orbitron">{t('footer.quickLinks')}</h3>
                         <ul className="space-y-3">
-                            <li><Link to="/" className="text-gray-400 hover:text-primary text-sm transition-colors">Home</Link></li>
-                            <li><Link to="/services" className="text-gray-400 hover:text-primary text-sm transition-colors">Services</Link></li>
-                            <li><Link to="/pricing" className="text-gray-400 hover:text-primary text-sm transition-colors">Pricing</Link></li>
-                            <li><Link to="/maintenance" className="text-gray-400 hover:text-primary text-sm transition-colors">Maintenance</Link></li>
+                            <li><Link to="/" className="text-gray-400 hover:text-primary text-sm transition-colors font-orbitron">{t('nav.home')}</Link></li>
+                            <li><Link to="/services" className="text-gray-400 hover:text-primary text-sm transition-colors font-orbitron">{t('nav.services')}</Link></li>
+                            <li><Link to="/pricing" className="text-gray-400 hover:text-primary text-sm transition-colors font-orbitron">{t('nav.pricing')}</Link></li>
+                            <li><Link to="/maintenance" className="text-gray-400 hover:text-primary text-sm transition-colors font-orbitron">{t('nav.maintenance')}</Link></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h3 className="text-lg font-semibold mb-6">Services</h3>
+                        <h3 className="text-lg font-semibold mb-6 font-orbitron">{t('footer.services')}</h3>
                         <ul className="space-y-3">
-                            <li><Link to="/services" className="text-gray-400 hover:text-primary text-sm transition-colors">Web Design</Link></li>
-                            <li><Link to="/services" className="text-gray-400 hover:text-primary text-sm transition-colors">React.js Development</Link></li>
-                            <li><Link to="/services" className="text-gray-400 hover:text-primary text-sm transition-colors">Performance Optimization</Link></li>
-                            <li><Link to="/services" className="text-gray-400 hover:text-primary text-sm transition-colors">SEO Audit</Link></li>
+                            <li><Link to="/services" className="text-gray-400 hover:text-primary text-sm transition-colors">{t('services.items.webDesign.title')}</Link></li>
+                            <li><Link to="/services" className="text-gray-400 hover:text-primary text-sm transition-colors">{t('services.items.react.title')}</Link></li>
+                            <li><Link to="/services" className="text-gray-400 hover:text-primary text-sm transition-colors">{t('services.items.performance.title')}</Link></li>
+                            <li><Link to="/services" className="text-gray-400 hover:text-primary text-sm transition-colors">{t('services.items.seo.title')}</Link></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h3 className="text-lg font-semibold mb-6">Contact</h3>
+                        <h3 className="text-lg font-semibold mb-6 font-orbitron">{t('footer.contact')}</h3>
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3 text-gray-400 text-sm">
                                 <MapPin size={18} className="text-primary shrink-0 mt-0.5" />
-                                <span>Berlin, Germany</span>
+                                <span>{t('contact.location')}</span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400 text-sm">
                                 <Phone size={18} className="text-primary shrink-0" />
@@ -69,10 +72,10 @@ export default function Footer() {
                 </div>
 
                 <div className="border-t border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-gray-500 text-sm">© {new Date().getFullYear()} VoidStack. All rights reserved.</p>
-                    <div className="flex gap-6">
-                        <Link to="/privacy" className="text-gray-500 hover:text-white text-sm">Privacy Policy</Link>
-                        <Link to="/terms" className="text-gray-500 hover:text-white text-sm">Terms of Service</Link>
+                    <p className="text-gray-500 text-sm">© {new Date().getFullYear()} VoidStack. {t('footer.rights')}</p>
+                    <div className="flex gap-6 font-orbitron">
+                        <Link to="/privacy" className="text-gray-500 hover:text-white text-sm">{t('common.privacyPolicy')}</Link>
+                        <Link to="/terms" className="text-gray-500 hover:text-white text-sm">{t('common.termsOfService')}</Link>
                     </div>
                 </div>
             </div>

@@ -3,11 +3,14 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import Button from './Button';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from '../context/LanguageContext';
+import LanguageSwitch from './LanguageSwitch';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
+    const { t } = useTranslation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -18,11 +21,11 @@ export default function Navbar() {
     }, []);
 
     const navLinks = [
-        { name: 'Home', path: '/' },
-        { name: 'Services', path: '/services' },
-        { name: 'Pricing', path: '/pricing' },
-        { name: 'Maintenance', path: '/maintenance' },
-        { name: 'Contact', path: '/contact' },
+        { name: t('nav.home'), path: '/' },
+        { name: t('nav.services'), path: '/services' },
+        { name: t('nav.pricing'), path: '/pricing' },
+        { name: t('nav.maintenance'), path: '/maintenance' },
+        { name: t('nav.contact'), path: '/contact' },
     ];
 
     return (
@@ -36,18 +39,21 @@ export default function Navbar() {
                 <div className="hidden md:flex items-center gap-8">
                     {navLinks.map((link) => (
                         <Link
-                            key={link.name}
+                            key={link.path}
                             to={link.path}
                             className={`text-sm font-orbitron font-medium transition-colors hover:text-primary ${location.pathname === link.path ? 'text-primary' : 'text-gray-300'}`}
                         >
                             {link.name}
                         </Link>
                     ))}
-                    <Link to="/contact">
-                        <Button variant="primary" className="py-2 px-4 text-sm font-orbitron">
-                            Get a Quote
-                        </Button>
-                    </Link>
+                    <div className="flex items-center gap-4 border-l border-gray-800 pl-4">
+                        <LanguageSwitch />
+                        <Link to="/contact">
+                            <Button variant="primary" className="py-2 px-4 text-sm font-orbitron">
+                                {t('nav.getQuote')}
+                            </Button>
+                        </Link>
+                    </div>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -69,7 +75,7 @@ export default function Navbar() {
                     >
                         {navLinks.map((link) => (
                             <Link
-                                key={link.name}
+                                key={link.path}
                                 to={link.path}
                                 onClick={() => setIsOpen(false)}
                                 className={`text-lg font-orbitron font-medium ${location.pathname === link.path ? 'text-primary' : 'text-gray-300'}`}
@@ -77,11 +83,17 @@ export default function Navbar() {
                                 {link.name}
                             </Link>
                         ))}
-                        <Link to="/contact" onClick={() => setIsOpen(false)}>
-                            <Button variant="primary" className="w-full mt-4 font-orbitron">
-                                Get a Quote
-                            </Button>
-                        </Link>
+                        <div className="flex flex-col gap-4 pt-4 border-t border-gray-800">
+                            <div className="flex justify-between items-center">
+                                <span className="text-sm text-gray-400 font-orbitron">{t('nav.language')}</span>
+                                <LanguageSwitch />
+                            </div>
+                            <Link to="/contact" onClick={() => setIsOpen(false)}>
+                                <Button variant="primary" className="w-full font-orbitron">
+                                    {t('nav.getQuote')}
+                                </Button>
+                            </Link>
+                        </div>
                     </motion.div>
                 )}
             </AnimatePresence>

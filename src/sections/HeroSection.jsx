@@ -2,8 +2,11 @@ import { motion } from 'framer-motion';
 import Button from '../components/Button';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from '../context/LanguageContext';
 
 export default function HeroSection() {
+    const { t } = useTranslation();
+
     return (
         <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
             {/* Background Image / Overlay - REMOVED */}
@@ -19,23 +22,23 @@ export default function HeroSection() {
                     transition={{ duration: 0.8 }}
                 >
                     <div className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-semibold mb-6 backdrop-blur-sm">
-                        Future of Web Development
+                        {t('hero.badge')}
                     </div>
-                    <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 text-white">
-                        Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">React.js</span> & Web Design
+                    <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 text-white font-orbitron">
+                        {t('hero.titlePrefix')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">React.js</span> {t('hero.titleSuffix')}
                     </h1>
                     <p className="text-xl text-gray-400 mb-10 max-w-lg leading-relaxed">
-                        Modern, responsive, and high-performance websites tailored for your business growth. Experience the VoidStack difference.
+                        {t('hero.description')}
                     </p>
                     <div className="flex flex-wrap gap-4">
                         <Link to="/contact">
-                            <Button variant="primary" className="h-[52px] text-base px-8">
-                                Start Your Project
+                            <Button variant="primary" className="h-[52px] text-base px-8 font-orbitron">
+                                {t('hero.startProject')}
                             </Button>
                         </Link>
                         <Link to="/services">
-                            <Button variant="outline" className="h-[52px] text-base px-8">
-                                Our Services
+                            <Button variant="outline" className="h-[52px] text-base px-8 font-orbitron">
+                                {t('hero.ourServices')}
                             </Button>
                         </Link>
                     </div>

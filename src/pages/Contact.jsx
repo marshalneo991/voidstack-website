@@ -1,8 +1,11 @@
 
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone } from 'lucide-react';
+import { useTranslation } from '../context/LanguageContext';
 
 export default function Contact() {
+    const { t } = useTranslation();
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -12,9 +15,9 @@ export default function Contact() {
             className="pt-24 pb-24 container mx-auto px-6"
         >
             <div className="max-w-4xl mx-auto text-center">
-                <h1 className="text-4xl md:text-6xl font-bold mb-6">Let's Build Something <span className="text-primary">Amazing</span></h1>
+                <h1 className="text-4xl md:text-6xl font-bold mb-6 font-orbitron">{t('contact.title')} <span className="text-primary">{t('contact.titleAccent')}</span></h1>
                 <p className="text-gray-400 text-lg mb-16 leading-relaxed max-w-2xl mx-auto">
-                    Ready to start your next project? Get in touch with us and let's discuss how we can help you achieve your digital goals.
+                    {t('contact.subtitle')}
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -22,7 +25,7 @@ export default function Contact() {
                         <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                             <Mail size={32} />
                         </div>
-                        <h3 className="font-semibold text-white text-xl mb-2">Email Us</h3>
+                        <h3 className="font-semibold text-white text-xl mb-2 font-orbitron">{t('contact.emailUs')}</h3>
                         <p className="text-gray-400 group-hover:text-primary transition-colors">hello@voidstack.dev</p>
                     </a>
 
@@ -30,7 +33,7 @@ export default function Contact() {
                         <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                             <Phone size={32} />
                         </div>
-                        <h3 className="font-semibold text-white text-xl mb-2">Call Us</h3>
+                        <h3 className="font-semibold text-white text-xl mb-2 font-orbitron">{t('contact.callUs')}</h3>
                         <p className="text-gray-400 group-hover:text-primary transition-colors">+49 123 456 789</p>
                     </a>
 
@@ -38,8 +41,8 @@ export default function Contact() {
                         <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
                             <MapPin size={32} />
                         </div>
-                        <h3 className="font-semibold text-white text-xl mb-2">Visit Us</h3>
-                        <p className="text-gray-400">Berlin, Germany</p>
+                        <h3 className="font-semibold text-white text-xl mb-2 font-orbitron">{t('contact.visitUs')}</h3>
+                        <p className="text-gray-400">{t('contact.location')}</p>
                     </div>
                 </div>
             </div>
