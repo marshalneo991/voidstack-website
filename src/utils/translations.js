@@ -15,6 +15,7 @@ export const translations = {
             privacyPolicy: "Privacy Policy",
             termsOfService: "Terms of Service",
             startingFrom: "from",
+            whatsappMessage: "Hello VoidStack! I'm interested in starting a project.",
         },
         nav: {
             home: "Home",
@@ -210,6 +211,7 @@ export const translations = {
             privacyPolicy: "Datenschutzerklärung",
             termsOfService: "Nutzungsbedingungen",
             startingFrom: "ab",
+            whatsappMessage: "Hallo VoidStack! Ich habe Interesse an einem Projekt.",
         },
         nav: {
             home: "Home",

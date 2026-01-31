@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from '../context/LanguageContext';
 
 export default function WhatsAppButton() {
+    const { t } = useTranslation();
     const phoneNumber = "387644281802";
-    const message = encodeURIComponent("Hello VoidStack! I'm interested in starting a project.");
+    const message = encodeURIComponent(t('common.whatsappMessage'));
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
     return (
