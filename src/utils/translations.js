@@ -30,9 +30,9 @@ export const translations = {
         },
         hero: {
             badge: "Future of Web Development",
-            titlePrefix: "Professional",
-            titleSuffix: "& Web Design",
-            descriptionPart1: "Modern, responsive, and high-performance websites tailored for your business growth. Experience the ",
+            titlePrefix: "High-Performance",
+            titleSuffix: "& Web Development",
+            descriptionPart1: "Modern, responsive, and SEO-optimized websites tailored for your business growth. Experience the ",
             descriptionHighlight: "VoidStack",
             descriptionPart2: " difference.",
             startProject: "Start Your Project",
@@ -60,15 +60,15 @@ export const translations = {
             subtitle: "Leveraging cutting-edge technologies to deliver exceptional digital experiences.",
             items: {
                 webDesign: {
-                    title: "Web Design",
+                    title: "Custom Web Design",
                     description: "Sleek, modern aesthetics designed to captivate your audience. We focus on intuitive UI/UX that drives conversions and engagement."
                 },
                 react: {
-                    title: "React.js",
+                    title: "React.js Development",
                     description: "Building scalable single-page applications with the power of React. Component-based architecture ensuring maintainability and speed."
                 },
                 performance: {
-                    title: "Performance",
+                    title: "Speed & Performance",
                     description: "Blazing fast load times and optimized assets. We ensure your site ranks high on Core Web Vitals and provides a smooth user experience."
                 },
                 uiux: {
@@ -76,7 +76,7 @@ export const translations = {
                     description: "Intuitive, user-centered design for websites and apps that prioritizes user experience and interface consistency."
                 },
                 seo: {
-                    title: "SEO Optimization",
+                    title: "Advanced SEO",
                     description: "Technical SEO, on-page SEO, and strategy to achieve faster ranking and better visibility in search engines."
                 },
                 ecommerce: {

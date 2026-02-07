@@ -38,17 +38,17 @@ export default function Navbar() {
                 </Link>
 
                 {/* Desktop Nav */}
-                <motion.div
+                <motion.ul
                     initial="hidden"
                     animate="visible"
                     variants={{
                         visible: { transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
                         hidden: {}
                     }}
-                    className="hidden md:flex items-center gap-8"
+                    className="hidden md:flex items-center gap-8 list-none m-0 p-0"
                 >
                     {navLinks.map((link) => (
-                        <motion.div
+                        <motion.li
                             key={link.path}
                             variants={{
                                 hidden: { opacity: 0, y: -10 },
@@ -63,17 +63,17 @@ export default function Navbar() {
                             >
                                 {link.name}
                             </Link>
-                        </motion.div>
+                        </motion.li>
                     ))}
-                    <div className="flex items-center gap-4 border-l border-gray-800 pl-4">
+                    <li className="flex items-center gap-4 border-l border-gray-800 pl-4">
                         <LanguageSwitch />
                         <Link to="/contact">
                             <Button variant="primary" className="py-2 px-4 text-sm font-orbitron">
                                 {t('nav.getQuote')}
                             </Button>
                         </Link>
-                    </div>
-                </motion.div>
+                    </li>
+                </motion.ul>
 
                 {/* Mobile Menu Button */}
                 <div className="md:hidden">

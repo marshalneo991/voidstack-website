@@ -4,6 +4,8 @@ import { CheckCircle2 } from 'lucide-react';
 import Button from '../components/Button';
 import { Link } from 'react-router-dom';
 
+import SEO from '../components/SEO';
+
 export default function AboutPage() {
     const { t } = useTranslation();
 
@@ -32,6 +34,12 @@ export default function AboutPage() {
             variants={containerVariants}
             className="pt-20 pb-24"
         >
+            <SEO
+                title={`${t('about.title')} | VoidStack`}
+                description="Learn more about VoidStack's mission, vision, and the team behind our premium digital solutions."
+                name="VoidStack"
+                type="website"
+            />
             <div className="container mx-auto px-6">
                 <div className="max-w-4xl mx-auto">
                     <motion.div variants={itemVariants} className="text-center mb-16">

@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { useTranslation } from '../context/LanguageContext';
+import SEO from '../components/SEO';
 
 export default function Contact() {
     const { t } = useTranslation();
@@ -14,6 +15,12 @@ export default function Contact() {
             transition={{ duration: 0.5 }}
             className="pt-24 pb-24 container mx-auto px-6"
         >
+            <SEO
+                title={`${t('contact.title')} | VoidStack`}
+                description="Get in touch with VoidStack for your next digital project."
+                name="VoidStack"
+                type="website"
+            />
             <div className="max-w-4xl mx-auto text-center">
                 <h1 className="text-4xl md:text-6xl font-bold mb-6 font-orbitron">{t('contact.title')} <span className="text-primary">{t('contact.titleAccent')}</span></h1>
                 <p className="text-gray-400 text-lg mb-16 leading-relaxed max-w-2xl mx-auto">

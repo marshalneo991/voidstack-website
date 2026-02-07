@@ -41,7 +41,7 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div>
+                    <nav aria-label="Footer Navigation">
                         <h3 className="text-lg font-semibold mb-6 font-orbitron">{t('footer.quickLinks')}</h3>
                         <ul className="space-y-3">
                             <li><Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors font-orbitron">{t('nav.home')}</Link></li>
@@ -50,16 +50,19 @@ export default function Footer() {
                             <li><Link to="/pricing" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors font-orbitron">{t('nav.pricing')}</Link></li>
                             <li><Link to="/maintenance" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors font-orbitron">{t('nav.maintenance')}</Link></li>
                         </ul>
-                    </div>
+                    </nav>
+
 
                     <div>
-                        <h3 className="text-lg font-semibold mb-6 font-orbitron">{t('footer.services')}</h3>
-                        <ul className="space-y-3">
-                            <li><Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors">{t('services.items.webDesign.title')}</Link></li>
-                            <li><Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors">{t('services.items.react.title')}</Link></li>
-                            <li><Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors">{t('services.items.performance.title')}</Link></li>
-                            <li><Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors">{t('services.items.seo.title')}</Link></li>
-                        </ul>
+                        <nav aria-label="Services Navigation">
+                            <h3 className="text-lg font-semibold mb-6 font-orbitron">{t('footer.services')}</h3>
+                            <ul className="space-y-3">
+                                <li><Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors">{t('services.items.webDesign.title')}</Link></li>
+                                <li><Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors">{t('services.items.react.title')}</Link></li>
+                                <li><Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors">{t('services.items.performance.title')}</Link></li>
+                                <li><Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-primary text-sm transition-colors">{t('services.items.seo.title')}</Link></li>
+                            </ul>
+                        </nav>
                     </div>
 
                     <div>
@@ -89,6 +92,6 @@ export default function Footer() {
                     </div>
                 </div>
             </motion.div>
-        </footer>
+        </footer >
     );
 }

@@ -3,12 +3,20 @@ import { Star } from 'lucide-react';
 import { useTranslation } from '../context/LanguageContext';
 import { testimonialsData } from '../utils/testimonials-data';
 
+import SEO from '../components/SEO';
+
 export default function TestimonialsPage() {
     const { language } = useTranslation();
     const data = testimonialsData[language];
 
     return (
         <div className="pt-20 pb-24">
+            <SEO
+                title={`${data.title} | VoidStack`}
+                description="See what our clients say about working with VoidStack."
+                name="VoidStack"
+                type="website"
+            />
             <div className="container mx-auto px-6">
                 <div className="max-w-6xl mx-auto">
                     {/* Header */}

@@ -1,4 +1,5 @@
 import { useTranslation } from '../context/LanguageContext';
+import SEO from '../components/SEO';
 
 export default function Terms() {
     const { t } = useTranslation();
@@ -6,6 +7,12 @@ export default function Terms() {
 
     return (
         <div className="pt-24 pb-24 container mx-auto px-6 max-w-4xl">
+            <SEO
+                title={`${t('terms.title')} | VoidStack`}
+                description="Terms and Conditions for using VoidStack services."
+                name="VoidStack"
+                type="website"
+            />
             <h1 className="text-4xl font-bold mb-8 font-orbitron">{t('terms.title')}</h1>
             <p className="text-gray-400 mb-8">{t('common.lastUpdated')}: {new Date().toLocaleDateString()}</p>
 

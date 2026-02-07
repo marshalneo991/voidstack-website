@@ -88,8 +88,11 @@ export default function HeroSection() {
                             <div className="absolute -inset-10 bg-primary/20 blur-[100px] rounded-full -z-10" />
                             <img
                                 src="/assets/hero-computer-v3.png"
-                                alt="VoidStack Hero"
+                                alt="VoidStack Web Development Services"
                                 className="w-full h-auto drop-shadow-2xl"
+                                fetchPriority="high"
+                                width="600"
+                                height="600"
                                 style={{
                                     maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
                                     WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)'
