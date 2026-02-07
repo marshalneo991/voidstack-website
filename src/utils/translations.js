@@ -30,8 +30,8 @@ export const translations = {
         },
         meta: {
             home: {
-                title: "VoidStack | High-Performance Web Development",
-                description: "VoidStack specializes in creating high-performance, visually stunning websites and digital solutions for businesses."
+                title: "VoidStack | High-Performance Web Development & Design",
+                description: "VoidStack specializes in creating high-performance, visually stunning websites and digital solutions that drive growth for businesses worldwide."
             },
             services: {
                 title: "Our Services | VoidStack",
@@ -286,8 +286,8 @@ export const translations = {
         },
         meta: {
             home: {
-                title: "VoidStack | High-Performance Webentwicklung",
-                description: "VoidStack ist spezialisiert auf die Erstellung von leistungsstarken, optisch ansprechenden Websites und digitalen Lösungen für Unternehmen."
+                title: "VoidStack | High-Performance Webentwicklung & Design",
+                description: "VoidStack erstellt leistungsstarke, optisch ansprechende Websites und digitale Lösungen, die das Wachstum Ihres Unternehmens nachhaltig fördern."
             },
             services: {
                 title: "Unsere Leistungen | VoidStack",
