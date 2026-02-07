@@ -1,13 +1,16 @@
 import ServicesSection from '../sections/ServicesSection';
 import SEO from '../components/SEO';
+import { useTranslation } from '../context/LanguageContext';
 
 
 export default function Services() {
+    const { t } = useTranslation();
+
     return (
         <>
             <SEO
-                title="Our Services | VoidStack"
-                description="Explore our range of digital services including web development, UI/UX design, and SEO optimization."
+                title={t('meta.services.title')}
+                description={t('meta.services.description')}
                 name="VoidStack"
                 type="website"
             />

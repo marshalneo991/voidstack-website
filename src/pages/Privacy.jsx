@@ -8,8 +8,8 @@ export default function Privacy() {
     return (
         <div className="pt-24 pb-24 container mx-auto px-6 max-w-4xl">
             <SEO
-                title={`${t('privacy.title')} | VoidStack`}
-                description="Privacy Policy for VoidStack."
+                title={t('meta.privacy.title')}
+                description={t('meta.privacy.description')}
                 name="VoidStack"
                 type="website"
             />

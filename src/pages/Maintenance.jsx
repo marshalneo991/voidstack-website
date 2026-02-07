@@ -1,8 +1,11 @@
 import MaintenanceSection from '../sections/MaintenanceSection';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
+import { useTranslation } from '../context/LanguageContext';
 
 export default function Maintenance() {
+    const { t } = useTranslation();
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -11,8 +14,8 @@ export default function Maintenance() {
             transition={{ duration: 0.5 }}
         >
             <SEO
-                title="Maintenance Services | VoidStack"
-                description="Keep your website secure and up-to-date with our maintenance packages."
+                title={t('meta.maintenance.title')}
+                description={t('meta.maintenance.description')}
                 name="VoidStack"
                 type="website"
             />

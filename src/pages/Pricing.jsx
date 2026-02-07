@@ -1,8 +1,11 @@
 import PricingSection from '../sections/PricingSection';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
+import { useTranslation } from '../context/LanguageContext';
 
 export default function Pricing() {
+    const { t } = useTranslation();
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -11,8 +14,8 @@ export default function Pricing() {
             transition={{ duration: 0.5 }}
         >
             <SEO
-                title="Pricing & Packages | VoidStack"
-                description="Transparent pricing for our web development and digital services."
+                title={t('meta.pricing.title')}
+                description={t('meta.pricing.description')}
                 name="VoidStack"
                 type="website"
             />

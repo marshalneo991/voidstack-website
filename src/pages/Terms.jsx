@@ -8,8 +8,8 @@ export default function Terms() {
     return (
         <div className="pt-24 pb-24 container mx-auto px-6 max-w-4xl">
             <SEO
-                title={`${t('terms.title')} | VoidStack`}
-                description="Terms and Conditions for using VoidStack services."
+                title={t('meta.terms.title')}
+                description={t('meta.terms.description')}
                 name="VoidStack"
                 type="website"
             />

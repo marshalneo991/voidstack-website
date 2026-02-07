@@ -28,6 +28,48 @@ export const translations = {
             getQuote: "Get a Quote",
             language: "Language",
         },
+        meta: {
+            home: {
+                title: "VoidStack | High-Performance Web Development",
+                description: "VoidStack specializes in creating high-performance, visually stunning websites and digital solutions for businesses."
+            },
+            services: {
+                title: "Our Services | VoidStack",
+                description: "Explore our range of digital services including web development, UI/UX design, and SEO optimization."
+            },
+            about: {
+                title: "About | VoidStack",
+                description: "Learn more about VoidStack and our mission to deliver exceptional digital experiences."
+            },
+            portfolio: {
+                title: "Portfolio | VoidStack",
+                description: "Check out our recent projects and success stories."
+            },
+            pricing: {
+                title: "Pricing | VoidStack",
+                description: "Transparent pricing packages for web development and maintenance services."
+            },
+            contact: {
+                title: "Contact | VoidStack",
+                description: "Get in touch with us to start your next digital project."
+            },
+            maintenance: {
+                title: "Maintenance | VoidStack",
+                description: "Keep your website secure and up-to-date with our maintenance plans."
+            },
+            testimonials: {
+                title: "Testimonials | VoidStack",
+                description: "See what our clients say about working with us."
+            },
+            privacy: {
+                title: "Privacy Policy | VoidStack",
+                description: "Read our privacy policy to understand how we handle your data."
+            },
+            terms: {
+                title: "Terms of Service | VoidStack",
+                description: "Read our terms of service for using our website and services."
+            }
+        },
         hero: {
             badge: "Future of Web Development",
             titlePrefix: "High-Performance",
@@ -242,10 +284,52 @@ export const translations = {
             getQuote: "Angebot anfragen",
             language: "Sprache",
         },
+        meta: {
+            home: {
+                title: "VoidStack | High-Performance Webentwicklung",
+                description: "VoidStack ist spezialisiert auf die Erstellung von leistungsstarken, optisch ansprechenden Websites und digitalen Lösungen für Unternehmen."
+            },
+            services: {
+                title: "Unsere Leistungen | VoidStack",
+                description: "Entdecken Sie unser Angebot an digitalen Dienstleistungen wie Webentwicklung, UI/UX-Design und SEO-Optimierung."
+            },
+            about: {
+                title: "Über mich | VoidStack",
+                description: "Erfahren Sie mehr über VoidStack und meine Mission, außergewöhnliche digitale Erlebnisse zu liefern."
+            },
+            portfolio: {
+                title: "Portfolio | VoidStack",
+                description: "Sehen Sie sich unsere aktuellen Projekte und Erfolgsgeschichten an."
+            },
+            pricing: {
+                title: "Preise | VoidStack",
+                description: "Transparente Preispakete für Webentwicklung und Wartungsdienste."
+            },
+            contact: {
+                title: "Kontakt | VoidStack",
+                description: "Kontaktieren Sie uns, um Ihr nächstes digitales Projekt zu starten."
+            },
+            maintenance: {
+                title: "Wartung | VoidStack",
+                description: "Halten Sie Ihre Website sicher und aktuell mit unseren Wartungsplänen."
+            },
+            testimonials: {
+                title: "Kundenstimmen | VoidStack",
+                description: "Was unsere Kunden über die Zusammenarbeit mit uns sagen."
+            },
+            privacy: {
+                title: "Datenschutz | VoidStack",
+                description: "Lesen Sie unsere Datenschutzerklärung, um zu erfahren, wie wir mit Ihren Daten umgehen."
+            },
+            terms: {
+                title: "AGB | VoidStack",
+                description: "Lesen Sie unsere Nutzungsbedingungen für die Nutzung unserer Website und Dienste."
+            }
+        },
         hero: {
             badge: "Zukunft der Webentwicklung",
-            titlePrefix: "Professionelles",
-            titleSuffix: "& Webdesign",
+            titlePrefix: "High-Performance",
+            titleSuffix: "& Webentwicklung",
             descriptionPart1: "Moderne, responsive und leistungsstarke Websites, maßgeschneidert für Ihr Geschäftswachstum. Erleben Sie den ",
             descriptionHighlight: "VoidStack",
             descriptionPart2: "-Unterschied.",
@@ -274,15 +358,15 @@ export const translations = {
             subtitle: "Wir nutzen modernste Technologien, um außergewöhnliche digitale Erlebnisse zu schaffen.",
             items: {
                 webDesign: {
-                    title: "Webdesign",
+                    title: "Maßgeschneidertes Webdesign",
                     description: "Elegante, moderne Ästhetik, die Ihr Publikum fesselt. Wir konzentrieren uns auf intuitive UI/UX, die Conversions und Engagement fördert."
                 },
                 react: {
-                    title: "React.js",
+                    title: "React.js Entwicklung",
                     description: "Entwicklung skalierbarer Single-Page-Anwendungen mit der Power von React. Komponentenbasierte Architektur sorgt für Wartbarkeit und Speed."
                 },
                 performance: {
-                    title: "Performance",
+                    title: "Speed & Performance",
                     description: "Blitzschnelle Ladezeiten und optimierte Assets. Wir sorgen dafür, dass Ihre Seite bei Core Web Vitals hoch rankt."
                 },
                 uiux: {
@@ -290,7 +374,7 @@ export const translations = {
                     description: "Intuitives, nutzerzentriertes Design für Websites und Apps, das Benutzererfahrung und Interface-Konsistenz priorisiert."
                 },
                 seo: {
-                    title: "SEO-Optimierung",
+                    title: "Professionelle SEO",
                     description: "Technisches SEO, On-Page-SEO und Strategie für schnelleres Ranking und bessere Sichtbarkeit in Suchmaschinen."
                 },
                 ecommerce: {

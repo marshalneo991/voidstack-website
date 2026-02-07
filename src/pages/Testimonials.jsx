@@ -6,14 +6,14 @@ import { testimonialsData } from '../utils/testimonials-data';
 import SEO from '../components/SEO';
 
 export default function TestimonialsPage() {
-    const { language } = useTranslation();
+    const { t, language } = useTranslation();
     const data = testimonialsData[language];
 
     return (
         <div className="pt-20 pb-24">
             <SEO
-                title={`${data.title} | VoidStack`}
-                description="See what our clients say about working with VoidStack."
+                title={t('meta.testimonials.title')}
+                description={t('meta.testimonials.description')}
                 name="VoidStack"
                 type="website"
             />

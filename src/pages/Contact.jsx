@@ -16,8 +16,8 @@ export default function Contact() {
             className="pt-24 pb-24 container mx-auto px-6"
         >
             <SEO
-                title={`${t('contact.title')} | VoidStack`}
-                description="Get in touch with VoidStack for your next digital project."
+                title={t('meta.contact.title')}
+                description={t('meta.contact.description')}
                 name="VoidStack"
                 type="website"
             />

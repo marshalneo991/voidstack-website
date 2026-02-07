@@ -35,8 +35,8 @@ export default function AboutPage() {
             className="pt-20 pb-24"
         >
             <SEO
-                title={`${t('about.title')} | VoidStack`}
-                description="Learn more about VoidStack's mission, vision, and the team behind our premium digital solutions."
+                title={t('meta.about.title')}
+                description={t('meta.about.description')}
                 name="VoidStack"
                 type="website"
             />
